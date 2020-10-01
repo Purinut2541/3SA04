@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 const availableZipItems = [
+
     { place: 'Chiangmai', code: '50000' },
     { place: 'Phuket', code: '83000' },
     
