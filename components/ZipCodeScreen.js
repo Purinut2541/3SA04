@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, FlatList, TouchableHighlight, StyleSheet} from 'react-native';
+import { View, Text, FlatList, TouchableHighlight, StyleSheet ,ImageBackground} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -28,12 +28,13 @@ export default function ZipCodeScreen() {
     const navigation = useNavigation()
     return (
         <View style={styles.center}>
-            
+            <ImageBackground source={require('../bg.jpg')} style={styles.backdrop}>   
             <FlatList
                 data={availableZipItems}
                 keyExtractor={_keyExtractor}
                 renderItem={({ item }) => <ZipItem {...item} navigation={navigation} />}
             />
+            </ImageBackground>
             <StatusBar style="auto" />
         </View>
     );
@@ -45,6 +46,11 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#FFF',
         marginTop: 20,
+    },
+    backdrop: {
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
     },
     
 })
