@@ -5,8 +5,6 @@ import { useNavigation } from '@react-navigation/native';
 
 
 const availableZipItems = [
-    { place: 'Hatyai', code: '90110' },
-    { place: 'Phrae', code: '54000' },
     { place: 'Chiangmai', code: '50000' },
     { place: 'Phuket', code: '83000' },
     
@@ -44,7 +42,7 @@ const styles = StyleSheet.create({
     center: {
         alignItems: 'center',
         fontSize: 30,
-        color: '#FFF',
+        color: 'red',
         marginTop: 20,
     },
     backdrop: {
